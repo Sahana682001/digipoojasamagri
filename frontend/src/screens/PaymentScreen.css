@@ -1,0 +1,131 @@
+/* src/screens/PaymentScreen.css */
+.payment-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(194, 24, 91, 0.08);
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #f3e5e8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #FF6F00;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.payment-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF6F00 0%, #FF8E53 100%);
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.payment-method-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.method-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.method-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  border: 1px solid #e0c8cf;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff;
+}
+
+.method-option:hover {
+  border-color: #FF6F00;
+  box-shadow: 0 2px 8px rgba(194, 24, 91, 0.1);
+}
+
+.method-option.selected {
+  border-color: #FF6F00;
+  background-color: #fff9fb;
+}
+
+.method-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.method-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.submit-button {
+  padding: 1rem;
+  background: linear-gradient(90deg, #FF6F00 0%, #FF8E53 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(194, 24, 91, 0.2);
+}
+
+.submit-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .payment-container {
+    margin: 1.5rem;
+    padding: 1.8rem;
+  }
+  
+  .payment-header {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .method-option {
+    padding: 1rem;
+  }
+  
+  .submit-button {
+    padding: 0.9rem;
+  }
+}

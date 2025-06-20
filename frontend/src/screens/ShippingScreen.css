@@ -1,0 +1,106 @@
+.shipping {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(194, 24, 91, 0.08);
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #f3e5e8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.shipping h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #FF6F00;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.shipping h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF6F00 0%, #FF8E53 100%);
+}
+
+.shipping form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.shipping form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.shipping label {
+  font-weight: 500;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.shipping input {
+  padding: 1rem;
+  border: 1px solid #e0c8cf;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.shipping input:focus {
+  outline: none;
+  border-color: #FF6F00;
+  box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.1);
+}
+
+.shipping button {
+  padding: 1rem;
+  background: linear-gradient(90deg, #FF6F00 0%, #FF8E53 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shipping button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(194, 24, 91, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .shipping {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .shipping h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .shipping input {
+    padding: 0.9rem;
+  }
+  
+  .shipping button {
+    padding: 0.9rem;
+  }
+}

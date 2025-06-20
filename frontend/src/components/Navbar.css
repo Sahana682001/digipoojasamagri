@@ -1,0 +1,115 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  background: #FF6F00;
+  color: white;
+}
+
+.navbar__logo a {
+   text-decoration: none ;
+}
+
+.navbar__logo h2 {
+  font-family: 'Montserrat', sans-serif; /* Clean, modern font */
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ffffff; /* Solid rich pink */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0.5rem 0;
+  position: relative;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Optional: Add a cosmetic-inspired underline */
+.navbar__logo h2::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #FF6F00 0%, #fffcfa 100%);
+  opacity: 0.7;
+}
+
+.navbar__logo h2:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 4px 8px rgba(194, 24, 91, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar__logo h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar__links li {
+  margin-left: 1.5rem;
+}
+
+.navbar__links a, .navbar__links p {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar__links a:hover, .navbar__links p:hover {
+  color: #f4f4f4;
+}
+
+.cart__link {
+  display: flex;
+  align-items: center;
+}
+
+.cartlogo__badge {
+  background: white;
+  color: #333;
+  border-radius: 50%;
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+.navbar__user {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__user span {
+  margin-right: 0.5rem;
+}
+
+.hamburger__menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger__menu div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+  
+  .hamburger__menu {
+    display: block;
+  }
+}

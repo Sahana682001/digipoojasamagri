@@ -1,0 +1,63 @@
+/* components/CategorySlider.css */
+
+/* Slider Wrapper */
+.category-slider {
+  width: 100%;
+  margin: 20px 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px; /* for spacing if scrollbar shows temporarily */
+}
+
+/* Hide Scrollbar Cross-Browser */
+.category-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.category-slider {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Scrollable Flex Container */
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 10px 5px;
+}
+
+/* Individual Item Styling */
+.slider-item {
+  flex: 0 0 auto;
+  min-width: 220px;
+  max-width: 240px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.slider-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .slider-item {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-item {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item {
+    min-width: 140px;
+  }
+}

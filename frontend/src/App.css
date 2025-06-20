@@ -1,0 +1,16 @@
+.app {
+  height: 80vh;
+  /* display: flex; */
+}
+
+body {
+  margin: 0 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75 !important;
+    color: hsla(11, 100%, 62.2%, 1) !important;
+}

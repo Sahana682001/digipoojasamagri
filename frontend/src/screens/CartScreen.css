@@ -1,0 +1,125 @@
+.cartscreen {
+  display: flex;
+  max-width: 1300px;
+  margin: 2rem auto;
+  gap: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cartscreen h2 {
+  margin-bottom: 1.5rem;
+  color: #FF6F00;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-bottom: 2px solid #f3e5e8;
+  padding-bottom: 0.5rem;
+}
+
+.cartscreen__left {
+  flex: 0.7;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cartscreen__right {
+  flex: 0.3;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.cartscreen__info {
+  padding: 1.5rem;
+}
+
+.cartscreen__info p {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.cartscreen__info p:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.cartscreen__info p:last-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FF6F00;
+}
+
+.cartscreen__right button {
+  width: 100%;
+  padding: 1rem;
+  background: #FF6F00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cartscreen__right button:hover {
+  background: #9e1449;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(194, 24, 91, 0.3);
+}
+
+/* Empty cart styles */
+.cartscreen__left > div {
+  text-align: center;
+  padding: 3rem 0;
+  color: #666;
+}
+
+.cartscreen__left > div a {
+  color: #FF6F00;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.cartscreen__left > div a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 960px) {
+  .cartscreen {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .cartscreen__left,
+  .cartscreen__right {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cartscreen__right {
+    position: static;
+  }
+}
+
+/* Animation for cart items */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cartitem {
+  animation: fadeIn 0.3s ease-out forwards;
+}
